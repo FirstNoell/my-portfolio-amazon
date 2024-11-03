@@ -1,0 +1,11 @@
+{
+    "cookies": [],
+    "headers": {
+        "Accept": "application/json",
+        "Accept-Language": "en",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+    },
+    "lua_source": "\n    function main(splash, args)\n        assert(splash:go(args.url))\n        splash:wait(5)  -- Adjust wait time if needed\n        return { html = splash:html(), json = splash:json() }\n    end\n    ",
+    "timeout": 90,
+    "url": "https://www.reddit.com/r/all/new.json"
+}
